@@ -20,7 +20,7 @@ var seattle = {
   },
   cookieCount: function () {
     for (var j = 0; j < this.hours.length, j++) {
-      cookieNumber[j] = customers[j] * avgCookie
+      cookieNumber[j] =math.floor(customers[j] * avgCookie);
       console.log(cookieNumber);
     }
   }
