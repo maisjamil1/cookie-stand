@@ -9,6 +9,7 @@ function getRandomCust(min, max) {
 
 
 var seattle = {
+  Location$:'seattle',
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
@@ -39,16 +40,23 @@ var seattle = {
   // Display the values of each array as unordered lists in the browser
   render: function (){
     var container = document.getElementById('Sales Data');
+    var h2location$ = document.createElement('h2');
+    container.appendChild(h2location$);
+    h2location$.textContent=this.Location$;
     var ulList = document.createElement('ul');
     container.appendChild(ulList);
+    
+    // var h2location=container.document.createElement('li');
+    // h2location.textContent=this.Location$;
+
     // append li's to the ul containing arrays
     for(var a =0; a<this.hours.length ; a++) {
       var liList = document.createElement('li');
       ulList.appendChild(liList);
-      liList.textContent = this.hours[a]+' : '+this.dailyTotalCookie[a]+" cookies";
+      liList.textContent = this.hours[a] + ' : ' + this.cookieAmounts[a] + " cookies";
   }
-
-
+  ulList.appendChild(liList);
+  liList.textContent='Total:'+this.dailyTotalCookie+' cookies';
 
 
   }
