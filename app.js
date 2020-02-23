@@ -17,15 +17,16 @@ var seattle = {
   cookieNumber: [0],
   randomCust$$: function () {
     for (var i = 0; i < this.hours.length; i++) {
-      this.customers[i] = getRandomCust(this.minCust,this.maxCust);
-      console.log(this.customers);
+      this.customers[i] = getRandomCust(this.minCust, this.maxCust);
+      // console.log(this.customers);
 
     }
   },
   cookieCount: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      this.cookieNumber[j] =this.customers[j] * this.avgCookie;
-      console.log(this.cookieNumber);
+      this.cookieNumber[j] = this.customers[j] * this.avgCookie;
+      this.cookieNumber[j]=Math.floor(this.cookieNumber[j]);
+      // console.log(this.cookieNumber);
     }
   }
 
