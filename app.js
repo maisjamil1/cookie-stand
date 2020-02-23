@@ -4,6 +4,10 @@ function getRandomCust(min, max) {
   var randomCust = Math.floor(Math.random() * (max - min + 1) + min);
   return randomCust;
 }
+
+
+
+
 var seattle = {
   minCust: 23,
   maxCust: 65,
@@ -13,25 +17,20 @@ var seattle = {
   cookieNumber: [0],
   randomCust$$: function () {
     for (var i = 0; i < this.hours.length; i++) {
-      customers[i] = getRandomCust(minCust, maxCust);
-      console.log(customers);
+      this.customers[i] = getRandomCust(this.minCust,this.maxCust);
+      console.log(this.customers);
 
     }
   },
   cookieCount: function () {
-    for (var j = 0; j < this.hours.length, j++) {
-      cookieNumber[j] =math.floor(customers[j] * avgCookie);
-      console.log(cookieNumber);
+    for (var j = 0; j < this.hours.length; j++) {
+      this.cookieNumber[j] =this.customers[j] * this.avgCookie;
+      console.log(this.cookieNumber);
     }
   }
 
 
-
-
-
-
-
-
-
-
 }
+seattle.randomCust$$();
+seattle.cookieCount();
+console.log(seattle);
