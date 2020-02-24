@@ -196,10 +196,10 @@ function getRandomCust(min, max) {
 
 
   }
-  seattle.randomCust$$();
-  seattle.findCookieAmount();
-  seattle.findCookieTotal();
-  seattle.renderList();
+  Tokyo.randomCust$$();
+  Tokyo.findCookieAmount();
+  Tokyo.findCookieTotal();
+  Tokyo.renderList();
   console.log(Tokyo);
 
    // ____________________________________________________________________________________
@@ -275,10 +275,10 @@ function getRandomCust(min, max) {
 
 
   }
-  seattle.randomCust$$();
-  seattle.findCookieAmount();
-  seattle.findCookieTotal();
-  seattle.renderList();
+  Dubai.randomCust$$();
+  Dubai.findCookieAmount();
+  Dubai.findCookieTotal();
+  Dubai.renderList();
   console.log(Dubai);
   // ____________________________________________________________________________________
   var Paris = {
@@ -353,10 +353,10 @@ function getRandomCust(min, max) {
 
 
   }
-  seattle.randomCust$$();
-  seattle.findCookieAmount();
-  seattle.findCookieTotal();
-  seattle.renderList();
+  Paris.randomCust$$();
+  Paris.findCookieAmount();
+  Paris.findCookieTotal();
+  Paris.renderList();
   console.log(Paris);
    // ____________________________________________________________________________________
    var Lima = {
@@ -431,8 +431,8 @@ function getRandomCust(min, max) {
 
 
   }
-  seattle.randomCust$$();
-  seattle.findCookieAmount();
-  seattle.findCookieTotal();
-  seattle.renderList();
+  Lima.randomCust$$();
+  Lima.findCookieAmount();
+  Lima.findCookieTotal();
+  Lima.renderList();
   console.log(Lima);
