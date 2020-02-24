@@ -6,41 +6,7 @@ function getRandomCust(min, max) {
 }
 // ___________________________________________________________________________________________________
 
-// // // to find the cookies amount for each houre
-// function getCookieAmounts() {
-//   for (var j = 0; j < hours.length; j++) {
-//    cookieAmounts[j] = customers[j] * avgCookie;
-//     cookieAmounts[j] = Math.floor(cookieAmounts[j]);
-//   }
-// }
-// // // // ___________________________________________________________________________________________________
 
-// // to find the Daily Total cookies
-// function getCookieTotal() {
-//   for (var c = 0; c <cookieAmounts.length; c++) {
-//     dailyTotalCookie =dailyTotalCookie + cookieAmounts[c];
-//   }
-// }
-
-// // // // ___________________________________________________________________________________________________
-
-// function render() {
-//   var container = document.getElementById('Sales Data');
-//   var h2location$ = document.createElement('h2');
-//   container.appendChild(h2location$);
-//   h2location$.textContent =Location$;
-//   var ulList = document.createElement('ul');
-//   container.appendChild(ulList);
-//   for (var a = 0; a <hours.length; a++) {
-//     var liList = document.createElement('li');
-//     ulList.appendChild(liList);
-//     liList.textContent = hours[a] + ' : ' + cookieAmounts[a] + " cookies";
-//   }
-//   ulList.appendChild(liList);
-//   liList.textContent = 'Total:' + dailyTotalCookie + ' cookies';
-
-
-// }
 // //   // // ___________________________________________________________________________________________________
 
 
@@ -72,9 +38,7 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieAmount:function(){
-    //   getCookieAmounts ();
-    // },
+    
 
 
     // to find the Daily Total cookies
@@ -85,9 +49,7 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieTotal: function () {
-    //   getCookieTotal();
-    // },
+    
 
     // Display the values of each array as unordered lists in the browser
 
@@ -112,9 +74,7 @@ function getRandomCust(min, max) {
     }
 
 
-    // renderList: function () {
-    //   render();
-    // }
+    
 
 
   }
@@ -150,9 +110,7 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieAmount:function(){
-    //   getCookieAmounts ();
-    // },
+    
 
 
     // to find the Daily Total cookies
@@ -163,9 +121,6 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieTotal: function () {
-    //   getCookieTotal();
-    // },
 
     // Display the values of each array as unordered lists in the browser
 
@@ -190,10 +145,7 @@ function getRandomCust(min, max) {
     }
 
 
-    // renderList: function () {
-    //   render();
-    // }
-
+    
 
   }
   Tokyo.randomCust$$();
@@ -229,9 +181,6 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieAmount:function(){
-    //   getCookieAmounts ();
-    // },
 
 
     // to find the Daily Total cookies
@@ -242,11 +191,6 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieTotal: function () {
-    //   getCookieTotal();
-    // },
-
-    // Display the values of each array as unordered lists in the browser
 
     renderList: function (){
       var container = document.getElementById('Sales Data');
@@ -269,9 +213,7 @@ function getRandomCust(min, max) {
     }
 
 
-    // renderList: function () {
-    //   render();
-    // }
+    
 
 
   }
@@ -307,10 +249,6 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieAmount:function(){
-    //   getCookieAmounts ();
-    // },
-
 
     // to find the Daily Total cookies
     findCookieTotal:function(){
@@ -320,11 +258,6 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieTotal: function () {
-    //   getCookieTotal();
-    // },
-
-    // Display the values of each array as unordered lists in the browser
 
     renderList: function (){
       var container = document.getElementById('Sales Data');
@@ -347,9 +280,7 @@ function getRandomCust(min, max) {
     }
 
 
-    // renderList: function () {
-    //   render();
-    // }
+    
 
 
   }
@@ -385,9 +316,7 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieAmount:function(){
-    //   getCookieAmounts ();
-    // },
+    
 
 
     // to find the Daily Total cookies
@@ -398,9 +327,7 @@ function getRandomCust(min, max) {
     },
 
 
-    // findCookieTotal: function () {
-    //   getCookieTotal();
-    // },
+    
 
     // Display the values of each array as unordered lists in the browser
 
@@ -424,10 +351,6 @@ function getRandomCust(min, max) {
 
     }
 
-
-    // renderList: function () {
-    //   render();
-    // }
 
 
   }
