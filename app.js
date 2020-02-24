@@ -173,7 +173,7 @@ function getRandomCust(min, max) {
       var container = document.getElementById('Sales Data');
       var h2location$ = document.createElement('h2');
       container.appendChild(h2location$);
-      h2location$.textContent='Tokyo';
+      h2location$.textContent=this.Location$;
       var ulList = document.createElement('ul');
       container.appendChild(ulList);
 
@@ -252,7 +252,7 @@ function getRandomCust(min, max) {
       var container = document.getElementById('Sales Data');
       var h2location$ = document.createElement('h2');
       container.appendChild(h2location$);
-      h2location$.textContent='Dubai';
+      h2location$.textContent=this.Location$;
       var ulList = document.createElement('ul');
       container.appendChild(ulList);
 
@@ -330,7 +330,7 @@ function getRandomCust(min, max) {
       var container = document.getElementById('Sales Data');
       var h2location$ = document.createElement('h2');
       container.appendChild(h2location$);
-      h2location$.textContent='paris';
+      h2location$.textContent=this.Location$;
       var ulList = document.createElement('ul');
       container.appendChild(ulList);
 
@@ -408,7 +408,7 @@ function getRandomCust(min, max) {
       var container = document.getElementById('Sales Data');
       var h2location$ = document.createElement('h2');
       container.appendChild(h2location$);
-      h2location$.textContent='Lima';
+      h2location$.textContent=this.Location$;
       var ulList = document.createElement('ul');
       container.appendChild(ulList);
 
