@@ -39,6 +39,7 @@ Store.prototype.findCookieAmount = function () {
   for (var j = 0; j <hours.length; j++) {
     this.cookieAmounts[j] = this.randomCust[j] * this.avgCookie;
     this.cookieAmounts[j] = Math.floor(this.cookieAmounts[j]);
+    
 
   }
 };
@@ -61,15 +62,44 @@ salesTable.appendChild(trE1);
 
 
 
-// // // the first raw
+// the first raw_____________________________________________
+// empety cell __________
+var thE1 = document.createElement('th');
+  trE1.appendChild(thE1);
+    thE1.textContent ='  ' ;
+// _________________________
+//hours raw
 for (var i= 0; i <= hours.length; i++) {
   var thE1 = document.createElement('th');
     trE1.appendChild(thE1);
     thE1.textContent = hours[i] ;
   }
+  //Daily Location Total in the last cell in the first raw
   
-//   trE1.appendChild(thE1);
-//   thE1.textContent ='Daily Location Total';
+   trE1.appendChild(thE1);
+    thE1.textContent ='Daily Location Total';
+//___________________________________________________________
+
+
+// raw 2
+var trE1 = document.createElement('tr');
+salesTable.appendChild(trE1);
+//seattle________________________
+var tdE1 = document.createElement('td');
+  trE1.appendChild(thE1);
+  thE1.textContent='seattle';// may i can ues switch
+  // _____________________________
+  Store.prototype.makeRaw2 = function (){
+  for (var i= 0; i <= hours.length; i++) {
+    var tdE2 = document.createElement('td');
+      trE1.appendChild(tdE2);
+      tdE2.textContent =this.cookieAmounts[i] ;
+      console.log('gellllpppp',this.cookieAmounts[i]);
+    }
+}
+
+//___________________________________________________________
+  
 
   
   var seattle = new Store('seattle', 23, 65, 6.3);
@@ -86,6 +116,10 @@ var lima = new Store('lima', 2, 16,4.6);
 for (var i = 0; i < Stores.length; i++) {
   Stores[i].getRandomCustomer();
   Stores[i].findCookieAmount();
+  console.log('hiii',Stores[i]);
+
+  Stores[i].makeRaw2();
+  
   // Stores[i].findCookieAmount();
 }
 // console.log(seattle);
