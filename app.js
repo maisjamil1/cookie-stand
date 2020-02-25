@@ -77,7 +77,7 @@ salesTable.appendChild(trE1);
 // empety cell __________
 var thE1 = document.createElement('th');
 trE1.appendChild(thE1);
-thE1.textContent = '  ';
+thE1.textContent = 'Locations';
 // _________________________
 //hours raw
 for (var i = 0; i <= hours.length; i++) {
@@ -111,20 +111,20 @@ for (var i = 0; i <= hours.length; i++) {
 
 
 Store.prototype.makeRaw2 = function () {
+
   
 var trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
-// var tdE1 = document.createElement('td');
-
-trE1.appendChild(thE1);
-thE1.textContent =this.location$;// may i can ues switch
+var tdE1 = document.createElement('td');
+tdE1.textContent =this.location$;// may i can ues switch
+trE1.appendChild(tdE1);
 
 // _____________________________
 
   for (var i = 0; i <= hours.length; i++) {
     var tdE2 = document.createElement('td');
     trE1.appendChild(tdE2);
-    tdE2.textContent = this.cookieAmounts[i]
+    tdE2.textContent =this.cookieAmounts[i];
     console.log('please work !!!!', this.cookieAmounts[i]);
   }
 }
@@ -157,7 +157,7 @@ var lima = new Store('lima', 2, 16, 4.6);
 for (var i = 0; i < Stors.length; i++) {
   Stors[i].getRandomCustomer();
   Stors[i].findCookieAmount();
-  // Stors[i].findDailyCookieTotal();
+  Stors[i].findDailyCookieTotal();
 
 
   Stors[i].makeRaw2();
