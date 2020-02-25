@@ -6,7 +6,7 @@
 // ___________________________________________________________________________________________________
 var hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", 'Daily Location Total'];
 var Stors = [];
-// var totalForDays = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0];
+var totalForDays = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0];
 function Store(location$, minCust, maxCust, avgCookie) {
   this.location$ = location$;
   this.minCust = minCust;
@@ -17,7 +17,7 @@ function Store(location$, minCust, maxCust, avgCookie) {
   this.cookieAmounts = [];
   this.dailyTotalCookie = 0;
   // this.totalForDays=[];
-  this.totalForDays=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  // this.totalForDays=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
   //To find the stores array
   Stors.push(this);
@@ -69,8 +69,8 @@ Store.prototype.findDailyCookieTotal = function () {
 // // to find the Daily Total cookies for each day 
 Store.prototype.getTotalForDays = function () {
   for (var i = 0; i < hours.length - 1; i++) {
-    this.totalForDays = this.totalForDays[i] + this.cookieAmounts;
-    this.totalForDays[hours.length - 1]=this.totalForDays[hours.length - 1]+this.dailyTotalCookie;
+    totalForDays[i]=totalForDays[i] + this.cookieAmounts[i];
+    totalForDays[hours.length - 1]=totalForDays[hours.length - 1]+this.dailyTotalCookie;
   }
   
 };
@@ -160,16 +160,16 @@ Store.prototype.makeRaw2 = function () {
 //     thE1.textContent = this.totalForDays[i];
 //   }}
 
-function footer(){
-  for (var i = 0; i <Stors.length; i++) {
-        Store.totalForDays=Store.totalForDays[0];
-        trE1 = document.createElement('tr');
-        salesTable.appendChild(trE1);
-        trE1.appendChild(tdE1);
-        tdE1.textContent = this.totalForDays[i];
-      }
+// function footer(){
+//   for (var i = 0; i <Stors.length; i++) {
+//         Store.totalForDays=Store.totalForDays[0];
+//         trE1 = document.createElement('tr');
+//         salesTable.appendChild(trE1);
+//         trE1.appendChild(tdE1);
+//         tdE1.textContent = this.totalForDays[i];
+//       }
 
-}
+// }
 
 
 
@@ -206,7 +206,8 @@ for (var i = 0; i < Stors.length; i++) {
 
 
 }
-console.log(footer);
+
+console.log(totalForDays);
 
 
 // seattle.getRandomCustomer();
