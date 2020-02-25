@@ -127,8 +127,13 @@ trE1.appendChild(tdE1);
     tdE2.textContent =this.cookieAmounts[i];
     console.log('please work !!!!', this.cookieAmounts[i]);
   }
-}
+  
+// salesTable.appendChild(trE1);
+// tdE1.textContent =this.dailyTotalCookie;
+trE1.appendChild(tdE2);
+    tdE2.textContent =this.dailyTotalCookie;
 
+}
 
 
 
