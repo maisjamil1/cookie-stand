@@ -1,0 +1,21 @@
+/* *{
+  box-sizing: border-box;
+} */
+body{
+  background-color: #C8BFC3;
+  background-image: none;
+  background-image: url("gsalmon-1.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin-top: 10%;
+  overflow: hidden;
+  width: 100%;
+}
+header{
+  background: rgba(36, 32, 32, 0.664);
+  height: 15%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
