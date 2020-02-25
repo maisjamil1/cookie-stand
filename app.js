@@ -36,23 +36,12 @@ Store.prototype.getRandomCustomer = function () {
 };
 //___________________________________________
 // to find the cookies amount for each houre
-// Store.prototype.findCookieAmount = function () {
-//   for (var j = 0; j < hours.length; j++) {
-//     // var cookiePerHour = [];
-//     this.cookiePerHour[j] = Math.floor(this.randomCust[j] * this.avgCookie);
-
-//     this.cookieAmounts.push(this.cookiePerHour[j]);
-    
-
-
-//   }
-// };
 Store.prototype.findCookieAmount = function () {
   for (var j = 0; j < hours.length; j++) {
     
     this.cookieAmounts[j] = Math.floor(this.randomCust[j] * this.avgCookie);
 
-    this.cookieAmounts.push(this.cookieAmounts[j]);
+    // this.cookieAmounts.push(this.cookieAmounts[j]);
     
 
 
@@ -68,11 +57,11 @@ Store.prototype.findCookieAmount = function () {
 
 //___________________________________________
 // // to find the Daily Total cookies
-// Store.prototype.findCookieAmount = function () {
-//   for (var i = 0; i < hours.length; i++) {
-//     this.dailyTotalCookie = this.dailyTotalCookie + this.cookieAmounts[i];
-//   }
-// };
+Store.prototype.findDailyCookieTotal = function () {
+  for (var i = 0; i < hours.length; i++) {
+    this.dailyTotalCookie= this.dailyTotalCookie + this.cookieAmounts[i];
+  }
+};
 
 // Display the values
 // ===============================================================
@@ -113,7 +102,7 @@ Store.prototype.makeRaw2 = function () {
   for (var i = 0; i <= hours.length; i++) {
     var tdE2 = document.createElement('td');
     trE1.appendChild(tdE2);
-    tdE2.textContent = hours[i];
+    tdE2.textContent = this.cookieAmounts[i];
     console.log('gellllpppp', this.cookieAmounts[i]);
   }
 }
@@ -146,6 +135,7 @@ var shopArr = [seattle, tokyo, dubai, paris, lima]
 
 seattle.getRandomCustomer();
 seattle.findCookieAmount();
+seattle.findDailyCookieTotal();
 seattle.makeRaw2();
 console.log(seattle);
 
