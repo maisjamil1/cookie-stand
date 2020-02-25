@@ -4,8 +4,8 @@
 
 
 // ___________________________________________________________________________________________________
-var hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-var Stores = [];
+var hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm",'Daily Location Total'];
+var Stors = [];
 
 function Store(location$, minCust, maxCust, avgCookie) {
   this.location$ = location$;
@@ -17,7 +17,7 @@ function Store(location$, minCust, maxCust, avgCookie) {
   this.cookieAmounts = [];
   this.dailyTotalCookie = 0;
   //To find the stores array
-  Stores.push(this);
+  Stors.push(this);
   // console.log('Stores Array', Store);
 }
 //___________________________________________
@@ -28,7 +28,7 @@ function getRandomCust(min, max) {
 }
 //______________________
 Store.prototype.getRandomCustomer = function () {
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length-1; i++) {
     this.randomCust[i] = getRandomCust(this.minCust, this.maxCust);
 
   }
@@ -37,7 +37,7 @@ Store.prototype.getRandomCustomer = function () {
 //___________________________________________
 // to find the cookies amount for each houre
 Store.prototype.findCookieAmount = function () {
-  for (var j = 0; j < hours.length; j++) {
+  for (var j = 0; j < hours.length-1; j++) {
     
     this.cookieAmounts[j] = Math.floor(this.randomCust[j] * this.avgCookie);
 
@@ -58,7 +58,7 @@ Store.prototype.findCookieAmount = function () {
 //___________________________________________
 // // to find the Daily Total cookies
 Store.prototype.findDailyCookieTotal = function () {
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length-1; i++) {
     this.dailyTotalCookie= this.dailyTotalCookie + this.cookieAmounts[i];
   }
 };
@@ -86,8 +86,9 @@ for (var i = 0; i <= hours.length; i++) {
   thE1.textContent = hours[i];
 }
 //Daily Location Total in the last cell in the first raw
-trE1.appendChild(thE1);
-thE1.textContent = 'Daily Location Total';
+
+
+
 //___________________________________________________________
 
 // raw 2
@@ -106,19 +107,24 @@ thE1.textContent = 'Daily Location Total';
 //     console.log('please work !!!!', this.cookieAmounts[i]);
 //   }
 // }
+// Store.prototype.makeRowForlocation = func
+
 
 Store.prototype.makeRaw2 = function () {
+  
 var trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
-var tdE1 = document.createElement('td');
+// var tdE1 = document.createElement('td');
+
 trE1.appendChild(thE1);
 thE1.textContent =this.location$;// may i can ues switch
+
 // _____________________________
 
   for (var i = 0; i <= hours.length; i++) {
     var tdE2 = document.createElement('td');
     trE1.appendChild(tdE2);
-    tdE2.textContent = this.cookieAmounts[i];
+    tdE2.textContent = this.cookieAmounts[i]
     console.log('please work !!!!', this.cookieAmounts[i]);
   }
 }
@@ -148,13 +154,13 @@ var lima = new Store('lima', 2, 16, 4.6);
 // var shopArr = [seattle, tokyo, dubai, paris, lima]
 
 //call the function
-for (var i = 0; i < Stores.length; i++) {
-  Stores[i].getRandomCustomer();
-  Stores[i].findCookieAmount();
-  Stores[i].findDailyCookieTotal();
+for (var i = 0; i < Stors.length; i++) {
+  Stors[i].getRandomCustomer();
+  Stors[i].findCookieAmount();
+  // Stors[i].findDailyCookieTotal();
 
 
-  Stores[i].makeRaw2();
+  Stors[i].makeRaw2();
 
 
 
