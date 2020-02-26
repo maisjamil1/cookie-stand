@@ -4,10 +4,11 @@ nav{
   font-size: 30px;
   text-align: center;
   background: rgb(112, 111, 111);
+  position: fixed;
 
 }body{
   background-color: #C8BFC3;
-  background-image: none;
+  
   background-image: url("ef722d6410685ee607533a93b5aeadec.jpg");
   background-size: cover;
   height: 100vh;
@@ -39,4 +40,7 @@ table{
   height: 35px;
   background-color: #a3cbff;
   font-weight: bold;
+}
+table td{
+  text-align: center;
 }
