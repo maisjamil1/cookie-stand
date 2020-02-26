@@ -40,13 +40,18 @@ h2 {
 h3 {
   text-align: center;
   font-size: 25px;
-  color: rgb(230, 222, 222);
+  color: rgb(14, 13, 13);
 }
 section img{
   display: block;
   width: 500px;
   margin: 0 auto;
 
+}
+#logo {
+   display: block;
+  width: 500px;
+  margin: 0 auto;
 }
 div{
   margin: 0 auto;
