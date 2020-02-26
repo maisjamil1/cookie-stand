@@ -74,7 +74,7 @@ trE1.appendChild(thE1);
 thE1.textContent = 'Locations';
 // _________________________
 //hours raw
-for (var i = 0; i <= hours.length; i++) {
+for (var i = 0; i < hours.length; i++) {
   thE1 = document.createElement('th');
   trE1.appendChild(thE1);
   thE1.textContent = hours[i];
@@ -91,7 +91,7 @@ Store.prototype.makeRaw2 = function () {
 
   // _____________________________
 //other raws
-  for (var i = 0; i <= hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     var tdE2 = document.createElement('td');
     trE1.appendChild(tdE2);
     tdE2.textContent = this.cookieAmounts[i];
@@ -107,16 +107,17 @@ Store.prototype.makeRaw2 = function () {
 function footer() {
 trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
-trE1.appendChild(tdE1);
-tdE1.textContent="total";
-
-
-  for (var i = 0; i < hours.length; i++) {
-
-    trE1.appendChild(tdE1);
-    tdE1.textContent =totalForDays[i];
-    
-  }
+console.log('hello',trE1);
+var tdE5 = document.createElement('td');
+  // trE1.appendChild(tdE1);
+  trE1.appendChild(tdE5);
+tdE5.textContent="total";
+for (var i = 0; i < hours.length; i++) {
+  var tdE1 = document.createElement('td');
+  trE1.appendChild(tdE1);
+  tdE1.textContent =totalForDays[i];
+  
+}
 
 }
 
