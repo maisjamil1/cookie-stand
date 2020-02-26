@@ -20,6 +20,7 @@ header{
   width: 100%;
 }
 nav{
+  margin-top: 0;
   font-size: 30px;
   text-align: center;
   background: rgb(112, 111, 111);

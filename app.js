@@ -74,7 +74,7 @@ trE1.appendChild(thE1);
 thE1.textContent = 'Locations';
 // _________________________
 //hours raw
-for (var i = 0; i <= hours.length; i++) {
+for (var i = 0; i < hours.length; i++) {
   thE1 = document.createElement('th');
   trE1.appendChild(thE1);
   thE1.textContent = hours[i];
@@ -91,7 +91,7 @@ Store.prototype.makeRaw2 = function () {
 
   // _____________________________
 //other raws
-  for (var i = 0; i <= hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     var tdE2 = document.createElement('td');
     trE1.appendChild(tdE2);
     tdE2.textContent = this.cookieAmounts[i];
