@@ -1,0 +1,35 @@
+body{
+  background-color: #C8BFC3;
+  background-image: none;
+  background-image: url("ef722d6410685ee607533a93b5aeadec.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin-top: 10%;
+  overflow: hidden;
+  width: 100%;
+}
+header{
+  background: rgba(36, 32, 32, 0.664);
+  height: 15%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #ccc;
+}
+table{
+  width: 95%;
+  border: 3px solid black;
+  background: white; 
+  margin: 2% auto;
+}
+ table th{
+  border: 2px solid rgb(74, 115, 251);
+  height: 35px;
+  background-color: #a3cbff;
+  font-weight: bold;
+}
