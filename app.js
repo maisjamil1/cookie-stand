@@ -155,18 +155,18 @@ footer();
 console.log(totalForDays);
 
 //form___________________________________________________________________
-function addNewStore(event){
-  event.preventDefault();// to prevent refreshing 
-  var newStoreLocation = event.target.location.value;
-  var newMincustomers = event.target.mincustomers.value;
-  var newMaxcustomers = event.target.maxcustomers.value;
-  var newAvg = event.target.avreage.value;
+// function addNewStore(event){
+//   event.preventDefault();// to prevent refreshing 
+//   var location$ = event.target.location.value;
+//   var minCust = event.target.mincustomers.value;
+//   var maxCust = event.target.maxcustomers.value;
+//   var avgCookie = event.target.avreage.value;
 
-  // make new instance by passing in new arguements
-  new Store(newStoreLocation,newMincustomers,newMaxcustomers,newAvg);
+//   // make new instance by passing in new arguements
+//   new Store(location$,minCust,maxCust,avgCookie);
  
 
-  newStoreForm.addEventListener('submit', addNewStore);
+//   newStoreForm.addEventListener('submit', addNewStore);
   
 
 
