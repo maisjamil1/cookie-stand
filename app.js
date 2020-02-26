@@ -68,6 +68,7 @@ var tdE1 = document.createElement('td');
 thE1 = document.createElement('th');
 
 // the first raw_____________________________________________
+function tableheader() {
 // empety cell __________
 var thE1 = document.createElement('th');
 trE1.appendChild(thE1);
@@ -78,9 +79,9 @@ for (var i = 0; i < hours.length; i++) {
   thE1 = document.createElement('th');
   trE1.appendChild(thE1);
   thE1.textContent = hours[i];
-}
+}}
 //___________________________________________________________
-//locations column
+//locations column+other raws
 Store.prototype.makeRaw2 = function () {
 
   var trE1 = document.createElement('tr');
@@ -103,7 +104,7 @@ Store.prototype.makeRaw2 = function () {
 
 }
 //render for footer______________________________________________
-// Store.prototype.footer = function () {
+
 function footer() {
 trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
@@ -133,7 +134,7 @@ var dubai = new Store('dubai', 11, 38, 3.7);
 var paris = new Store('paris', 20, 38, 2.3);
 var lima = new Store('lima', 2, 16, 4.6);
 
-
+tableheader();
 //call the function
 for (var i = 0; i < Stores.length; i++) {
   Stores[i].getRandomCustomer();
