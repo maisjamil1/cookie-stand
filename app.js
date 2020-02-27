@@ -170,7 +170,27 @@ console.log(totalForDays);
   
 
 
-}
+// }
+var myForm = document.getElementById('newStoreForm');
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var newLocation = event.target.location.value;
+
+  var newMinCust = event.target.breed.value;
+  
+  var newMaxCust = event.target.likes.value;
+  var nuwAvg = parseFloat(event.target.cats.checked);
+
+ 
+  // function Cat(name,likes,imagePath,goodWithKids,goodWithDogs,goodWithOtherCats,breed)
+  var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
+  catObj.getAge(4,7);
+  catObj.render();
+  myForm.reset();
+})
+
+
 
 
 
