@@ -154,6 +154,41 @@ footer();
 
 console.log(totalForDays);
 
+//form___________________________________________________________________
+// function addNewStore(event){
+//   event.preventDefault();// to prevent refreshing 
+//   var location$ = event.target.location.value;
+//   var minCust = event.target.mincustomers.value;
+//   var maxCust = event.target.maxcustomers.value;
+//   var avgCookie = event.target.avreage.value;
+
+//   // make new instance by passing in new arguements
+//   new Store(location$,minCust,maxCust,avgCookie);
+ 
+
+//   newStoreForm.addEventListener('submit', addNewStore);
+  
+
+
+// }
+var myForm = document.getElementById('newStoreForm');
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var newLocation = event.target.location.value;
+
+  var newMinCust = event.target.breed.value;
+  
+  var newMaxCust = event.target.likes.value;
+  var nuwAvg = parseFloat(event.target.cats.checked);
+
+ 
+  // function Cat(name,likes,imagePath,goodWithKids,goodWithDogs,goodWithOtherCats,breed)
+  var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
+  catObj.getAge(4,7);
+  catObj.render();
+  myForm.reset();
+})
 
 
 
