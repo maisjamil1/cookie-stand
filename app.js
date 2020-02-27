@@ -165,33 +165,38 @@ myForm.addEventListener('submit', function(event) {
   
   var newLocation = event.target.location.value;
 
-  var testNewMinCust = event.target.mincustomers.value;
+  var testNewMinCust = parseInt(event.target.mincustomers.value);
  
-  var newMaxCust = event.target.maxcustomers.value;
+  var newMaxCust = parseInt(event.target.maxcustomers.value);
+  
+  var nuwAvg = parseFloat(event.target.avreage.value);
+  console.log(newMaxCust);
+  console.log(testNewMinCust);
 
   if(testNewMinCust<newMaxCust){
     var newMinCust = event.target.mincustomers.value;
+    var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
+    // salesTable.removeChild(salesTable.lastChild);//ican use this also
+    document.getElementById('tablesales').deleteRow(Stores.length);
+    newStore.getRandomCustomer();
+    newStore.findCookieAmount();
+    newStore.findDailyCookieTotal();
+    newStore.getTotalForDays();
+    
+    newStore.makeRaw2();
+    footer();
   }else{
-  alert("the min number must be lower than the max");
+    alert("the min number must be lower than the max");
+  // document.getElementById('tablesales').deleteRow(Stores.length);
+  // myForm.innerHTML=' ';
 }
 
-var nuwAvg = parseFloat(event.target.avreage.value);
 
 
 
   
  
   
-  var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
-  // salesTable.removeChild(salesTable.lastChild);
-  document.getElementById('tablesales').deleteRow(Stores.length);
-  newStore.getRandomCustomer();
-  newStore.findCookieAmount();
-  newStore.findDailyCookieTotal();
-  newStore.getTotalForDays();
-  
-  newStore.makeRaw2();
-  footer();
 });
   
 
