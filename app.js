@@ -62,6 +62,8 @@ Store.prototype.getTotalForDays = function () {
 // ________________________________________________________________________________________________________________
 var container = document.getElementById('sales-data');
 var salesTable = document.createElement('table');
+salesTable.setAttribute('id','tablesales');
+
 container.appendChild(salesTable);
 var trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
@@ -146,32 +148,17 @@ for (var i = 0; i < Stores.length; i++) {
 
 
   Stores[i].makeRaw2();
-  // Stores.[i].footer();
+  
   
 
 
 }
 footer();
 
-console.log(totalForDays);
+
 
 //form___________________________________________________________________
-// function addNewStore(event){
-//   event.preventDefault();// to prevent refreshing 
-//   var location$ = event.target.location.value;
-//   var minCust = event.target.mincustomers.value;
-//   var maxCust = event.target.maxcustomers.value;
-//   var avgCookie = event.target.avreage.value;
 
-//   // make new instance by passing in new arguements
-//   new Store(location$,minCust,maxCust,avgCookie);
- 
-
-//   newStoreForm.addEventListener('submit', addNewStore);
-  
-
-
-// }
 var myForm = document.getElementById('newStoreForm');
 myForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -180,13 +167,14 @@ myForm.addEventListener('submit', function(event) {
 
   var testNewMinCust = event.target.mincustomers.value;
  
-  var NewMaxCust = event.target.maxcustomers.value;
+  var newMaxCust = event.target.maxcustomers.value;
 
-  if(testNewMinCust<NewMaxCust){
+  if(testNewMinCust<newMaxCust){
     var newMinCust = event.target.mincustomers.value;
   }else{
   alert("the min number must be lower than the max");
 }
+
 var nuwAvg = parseFloat(event.target.avreage.value);
 
 
@@ -195,11 +183,27 @@ var nuwAvg = parseFloat(event.target.avreage.value);
  
   
   var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
-  salesTable.removeChild(salesTable.lastChild)
+  // salesTable.removeChild(salesTable.lastChild);
+  document.getElementById('tablesales').deleteRow(Stores.length);
+  newStore.getRandomCustomer();
+  newStore.findCookieAmount();
+  newStore.findDailyCookieTotal();
+  newStore.getTotalForDays();
+  
+  newStore.makeRaw2();
+  footer();
+});
+  
+
 
 
   
-})
+
+
+
+
+  
+
 
 
 
