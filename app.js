@@ -54,8 +54,9 @@ Store.prototype.findDailyCookieTotal = function () {
 Store.prototype.getTotalForDays = function () {
   for (var i = 0; i < hours.length - 1; i++) {
     totalForDays[i] = totalForDays[i] + this.cookieAmounts[i];
-    totalForDays[hours.length - 1] = totalForDays[hours.length - 1] + this.dailyTotalCookie;
+    
   }
+  totalForDays[hours.length - 1] = totalForDays[hours.length - 1] + this.dailyTotalCookie;
 };
 // to Display the values
 // ________________________________________________________________________________________________________________
@@ -177,17 +178,27 @@ myForm.addEventListener('submit', function(event) {
   
   var newLocation = event.target.location.value;
 
-  var newMinCust = event.target.breed.value;
-  
-  var newMaxCust = event.target.likes.value;
-  var nuwAvg = parseFloat(event.target.cats.checked);
-
+  var testNewMinCust = event.target.mincustomers.value;
  
-  // function Cat(name,likes,imagePath,goodWithKids,goodWithDogs,goodWithOtherCats,breed)
+  var NewMaxCust = event.target.maxcustomers.value;
+
+  if(testNewMinCust<NewMaxCust){
+    var newMinCust = event.target.mincustomers.value;
+  }else{
+  alert("the min number must be lower than the max");
+}
+var nuwAvg = parseFloat(event.target.avreage.value);
+
+
+
+  
+ 
+  
   var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
-  catObj.getAge(4,7);
-  catObj.render();
-  myForm.reset();
+  salesTable.removeChild(salesTable.lastChild)
+
+
+  
 })
 
 
