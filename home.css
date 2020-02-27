@@ -1,7 +1,7 @@
 
 header{
   background: rgba(36, 32, 32, 0.664);
-  height: 15%;
+  /* height: 15%; */
   left: 0;
   position: fixed;
   top: 0;
@@ -19,9 +19,9 @@ body{
   background-image: none;
   background-image: url("gsalmon-1.jpg");
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 10%;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
 
