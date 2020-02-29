@@ -54,13 +54,16 @@ Store.prototype.findDailyCookieTotal = function () {
 Store.prototype.getTotalForDays = function () {
   for (var i = 0; i < hours.length - 1; i++) {
     totalForDays[i] = totalForDays[i] + this.cookieAmounts[i];
-    totalForDays[hours.length - 1] = totalForDays[hours.length - 1] + this.dailyTotalCookie;
+    
   }
+  totalForDays[hours.length - 1] = totalForDays[hours.length - 1] + this.dailyTotalCookie;
 };
 // to Display the values
 // ________________________________________________________________________________________________________________
 var container = document.getElementById('sales-data');
 var salesTable = document.createElement('table');
+salesTable.setAttribute('id','tablesales');
+
 container.appendChild(salesTable);
 var trE1 = document.createElement('tr');
 salesTable.appendChild(trE1);
@@ -145,14 +148,66 @@ for (var i = 0; i < Stores.length; i++) {
 
 
   Stores[i].makeRaw2();
-  // Stores.[i].footer();
+  
   
 
 
 }
 footer();
 
-console.log(totalForDays);
+
+
+//form___________________________________________________________________
+
+var myForm = document.getElementById('newStoreForm');
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var newLocation = event.target.location.value;
+
+  var testNewMinCust = parseInt(event.target.mincustomers.value);
+ 
+  var newMaxCust = parseInt(event.target.maxcustomers.value);
+  
+  var nuwAvg = parseFloat(event.target.avreage.value);
+  console.log(newMaxCust);
+  console.log(testNewMinCust);
+
+  if(testNewMinCust<newMaxCust){
+    var newMinCust = event.target.mincustomers.value;
+    var newStore = new Store(newLocation,newMinCust,newMaxCust,nuwAvg);
+    // salesTable.removeChild(salesTable.lastChild);//ican use this also
+    document.getElementById('tablesales').deleteRow(Stores.length);
+    newStore.getRandomCustomer();
+    newStore.findCookieAmount();
+    newStore.findDailyCookieTotal();
+    newStore.getTotalForDays();
+    
+    newStore.makeRaw2();
+    footer();
+  }else{
+    alert("the min number must be lower than the max");
+  // document.getElementById('tablesales').deleteRow(Stores.length);
+  // myForm.innerHTML=' ';
+}
+
+
+
+
+  
+ 
+  
+});
+  
+
+
+
+  
+
+
+
+
+  
 
 
 

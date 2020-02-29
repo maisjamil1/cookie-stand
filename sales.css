@@ -11,7 +11,7 @@ nav{
   
   background-image: url("ef722d6410685ee607533a93b5aeadec.jpg");
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 10%;
   overflow: hidden;
   width: 100%;
